@@ -1,0 +1,7 @@
+<h3>{{title}}</h3>
+<div *ngFor="let category of categories let id= index" class="list-group-item"
+  [routerLink]="['/category', category.categoryId ]">
+  <button type="button" class="btn btn-primary btn-lg btn-block category-item">
+    <fa-icon [icon]="check">{{category}}</fa-icon> {{category.name}}
+  </button>
+</div>

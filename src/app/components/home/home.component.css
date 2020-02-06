@@ -1,0 +1,33 @@
+*{
+    margin:0;
+}
+.container{
+    background-color: lemonchiffon !important;
+    margin:0;
+    padding:0;
+}
+.slider{
+    margin-top:40px;
+    width: 100%;
+}
+
+.navigation{
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.products{
+    width: 100%;
+}
+
+.shop-cart{
+    widows: 100%;
+}
+
+@media  only screen and (min-width: 1200px){
+    .container {
+    max-width: 100% !important;
+}
+} 

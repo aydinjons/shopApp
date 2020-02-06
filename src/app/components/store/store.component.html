@@ -1,0 +1,25 @@
+<div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false">
+    Sepet
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div *ngFor="let item of products$ | async; let i = index">
+      <li class="menu-item"><img [src]="item.src" class="basket-img">
+        <span class="badge badge-primary badge-pill p-1 m-1">{{item.name}} </span>
+        <span class="badge badge-primary badge-pill p-1 m-1">Adet:{{item.count}}</span>
+        <span class="badge badge-primary badge-pill p-1 m-1">Fiyat:{{item.price}}</span>
+        <span class="badge badge-primary badge-pill p-1 m-1">Toplam: {{item.count*item.price}}</span>
+      </li>
+    </div>
+    <ng-container *ngIf="addedItems != undefined">
+      <div class="container">
+        <div class="row">
+          <div class="col"><button type="button" class="btn btn-primary btn-lg btn-block m-1" routerLink="shopcart">Sepete Git</button></div>
+          <div class="col"> <span class="badge badge-danger mt-3">Sepetinizde {{addedItems.length}} çeşit ürün vardır</span>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

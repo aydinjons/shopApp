@@ -1,0 +1,168 @@
+
+.basket-img{
+    width:50px;
+	height:auto;
+	margin:3px;
+}
+
+.basket{
+    display: relative;
+} 
+
+a{text-align:center}
+
+body{
+	font-family:Tahoma,Geneva,sans-serif;
+	font-weight:400
+	}
+
+ol{margin:0;padding:0;list-style-type:none}
+
+.menu{
+	width:100%;
+	padding:0 16px;
+	display:block;
+	position:relative
+	}
+
+.menu > ol:first-child{
+	width:100%;
+	display:flex;
+	position:relative;
+	flex-flow:row wrap;
+	justify-content:center
+	}
+
+.menu-item{
+	min-width:340px;
+	width:fit-content;
+	min-height:50px;
+	position:relative;
+	perspective:100%;
+    cursor:pointer;
+    border-bottom:2px solid dodgerblue;
+	}
+
+.menu-item a{
+	width:100%;
+	padding:16px 0;
+	display:block;
+	position:relative;
+	color:#fff;
+	border-radius:4px;
+	transition:all .5s ease;
+    transform-style:preserve-3d;
+    
+	}
+
+.menu-item a:before{
+	width:100%;
+	padding:16px 0;
+	display:block;
+	position:absolute;
+	color:#000;
+	border-radius:4px
+	}
+
+.menu > ol:first-child > .menu-item{
+	display:block
+
+}
+
+.menu > ol:first-child > .menu-item > a
+	{background:#ff401e;box-shadow:0 8px 6px -6px #595959}
+
+.menu > ol:first-child > .menu-item:nth-of-type(2) > a,
+.menu > ol:first-child > .menu-item:nth-of-type(4) > a
+	{border-left:1px solid #fff;border-right:1px solid #fff}
+
+.menu > ol:first-child > .menu-item > a:before
+	{background:#ff9900;bottom:90%;transform:rotateX(-90deg) translate3d(0,0,75px)}
+
+.menu > ol:first-child > .menu-item:nth-of-type(1) > a:before{content:"Store"}
+.menu > ol:first-child > .menu-item:nth-of-type(2) > a:before{content:"About"}
+.menu > ol:first-child > .menu-item:nth-of-type(3) > a:before{content:"Widgets"}
+.menu > ol:first-child > .menu-item:nth-of-type(4) > a:before{content:"Kabobs"}
+.menu > ol:first-child > .menu-item:nth-of-type(5) > a:before{content:"Contact"}
+
+.menu > ol:first-child > .menu-item:nth-of-type(3) > a:after,
+.menu > ol:first-child > .menu-item:nth-of-type(4) > a:after{
+	content:"\0025BE";
+	width:100%;
+	padding:30px 0 0 0;
+	top:0;
+	display:block;
+	position:absolute;
+	color:#fff;
+	font-size:20px;
+	text-align:center
+	}
+
+.menu > ol:first-child > .menu-item:hover > a{
+	transform:rotateX(90deg);
+	
+}
+
+.menu > ol:first-child > .menu-item:nth-of-type(3):hover > a:after,
+.menu > ol:first-child > .menu-item:nth-of-type(4):hover > a:after
+	{content:"\0025B4";color:#000;transform:rotateX(-90deg) translate3d(0,0,75px)}
+
+.sub-menu{
+	background:#fff;
+	width:100%;
+	top:51px;
+	display:none;
+	position:absolute;
+	z-index:99;
+	border-top:1px solid #fff
+	}
+
+.sub-menu > .menu-item:nth-of-type(1){animation:fadein-down .5s .2s ease both}
+.sub-menu > .menu-item:nth-of-type(2){animation:fadein-down .7s .2s ease both}
+.sub-menu > .menu-item:nth-of-type(3){animation:fadein-down .9s .2s ease both}
+
+@keyframes fadein-down{
+	from{display:none;opacity:0;transform:translateY(-10px)}
+	to{display:block;opacity:1;transform:translateY(0)}
+	}
+
+.sub-menu > .menu-item > a{background:#008080}
+
+.sub-menu > .menu-item:nth-of-type(2) > a
+	{border-top:1px solid #fff;border-bottom:1px solid #fff}
+
+.sub-menu > .menu-item > a:before
+	{background:#bc003b;top:0}
+
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item > a:before{transform:rotateY(-90deg) translate3d(0,0,75px)}
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(1) > a:before{content:"Big Widgets"}
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(2) > a:before{content:"Bigger Widgets"}
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(3) > a:before{content:"Huge Widgets"}
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:hover > a{transform:rotateY(90deg)}
+
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item > a:before{transform:rotateY(90deg) translate3d(0,0,75px)}
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(1) > a:before{content:"Shishkabobs"}
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(2) > a:before{content:"BBQ kabobs"}
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(3) > a:before{content:"Summer kabobs"}
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:hover > a{transform:rotateY(-90deg)}
+
+.menu > ol:first-child > .menu-item:hover > .sub-menu{display:block}
+
+@media screen and (min-width:321px) and (max-width:799px){
+	.menu{width:320px;margin:auto}
+	}
+
+@media (max-width:799px){
+	.menu > ol:first-child > .menu-item{width:100%}
+	.menu > ol:first-child > .menu-item > a{box-shadow:none}
+	
+	.menu > ol:first-child > .menu-item:nth-of-type(2) > a,
+	.menu > ol:first-child > .menu-item:nth-of-type(4) > a
+		{border:1px solid #fff;border-left:none;border-right:none}
+	
+	.sub-menu > .menu-item{margin:auto}
+	}
+
+ 
+
+

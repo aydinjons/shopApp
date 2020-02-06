@@ -1,0 +1,13 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/alertifyjs/build/css/alertify.min.css";
+@import "../node_modules/alertifyjs/build/css/themes/bootstrap.min.css";
+@import "../node_modules/ng-alertify/dist/ng-alertify.css";
+
+h3{
+    color:dodgerblue;
+    border-bottom: 3px solid dodgerblue;
+    border-radius: 30%;
+    margin-top:0.5em !important;
+    max-width: fit-content;
+    align-items:center;
+}

@@ -1,0 +1,42 @@
+.card-img-top{
+    width:auto;
+    height:13rem;
+}
+.card{
+    margin:2px;
+}
+.form-control{
+    background-color:#ff401e;
+    color:white;
+    height: 3rem;
+    max-width:100%;
+    display: block;
+    background:transparent;
+    border:2px solid #ff401e;
+    font-size:16px;
+    border-radius:20px;
+    transition: all 1s;  
+    background-color:#2196f3;
+}
+input[placeholder]{
+    color:#ff401e;
+}
+/* .form-group {
+    width: 80%;
+} */
+
+.card-body{
+    transition: 0.5s ;
+    
+}
+.card-body:hover{
+    background-color:ff401e ;
+} 
+
+#productFilter::placeholder{
+color:white;
+}
+.products-container{
+    width:max-content;
+    max-width: fit-content;
+}

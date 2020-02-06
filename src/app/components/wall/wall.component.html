@@ -1,0 +1,11 @@
+<div class="row products-container mt-5">
+    <div *ngFor="let select of selectedCategory" class="card" style="width: 17rem;">
+        <img [src]="select.src" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{select.name}}</h5>
+          <h5 class="card-title">{{select.price | currency}}</h5>
+          <p class="card-text">{{select.description}}</p>
+          <a (click)="addToCard(select)" class="btn btn-primary">Satın Al</a>
+        </div>
+      </div>
+    </div>

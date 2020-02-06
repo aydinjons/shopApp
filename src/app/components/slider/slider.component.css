@@ -1,0 +1,26 @@
+img{
+    width:100%;
+
+    outline: none;
+}
+.container{
+    width:100%;
+    border-radius: 20px;
+    outline: none;
+}
+
+
+
+@media  only screen and (min-width: 1200px){
+    .container {
+    max-width: 100% !important;
+}
+} 
+
+
+
+/* @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  } */

@@ -1,0 +1,66 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+a img{
+    width:3em;
+    margin-left:1em;
+}
+
+a.nav-link{
+    transition: 0.5s;
+    border-radius: 0px;
+    border:0;
+    font-size: large; 
+}
+
+
+
+a.nav-link:hover{
+    background-color: #ff401e;
+    border-radius: 20px;
+    border:0;
+}
+
+.alert-success{
+margin:1em;
+display: flex;
+align-self: center;
+font-size: large; 
+}
+
+
+
+#search-box{
+    transition: 0.7s;
+    width: 200px;
+    color:dodgerblue;
+    font-size: large; 
+}
+#search-box:focus{
+width: 400px;
+font-size: large; 
+background-color: #ff401e;
+color: white;
+padding-left: 10px;
+}
+
+*::placeholder{
+    color:black;
+}
+#card-container{
+    position:relative;
+    width:200px;
+    height:60px;
+    margin:0.2em;
+    z-index: 5;
+}
+
+#card-container:hover{
+    width:200px;
+    height:200px;
+    z-index: 9999;
+    transition: ease 1s;
+}

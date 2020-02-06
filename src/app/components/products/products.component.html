@@ -1,0 +1,18 @@
+<script src="i18n/angular-locale_tr-tr.js"></script>
+<h3>{{title}}</h3>
+<div class="form-group">
+ 
+  <input [(ngModel)]="filterText"  class="form-control" id="productFilter"  placeholder="Ürün Ara">
+  <small id="emailHelp" class="form-text text-muted">Aradığınız kelime:{{filterText}}</small>
+</div>
+<div class="row products-container mb-2">
+<div *ngFor="let product of products | productFilter:filterText let i = index" id="card" class="card" style="width: 17rem;">
+    <img [src]="product.src" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <h5 class="card-title">{{product.price | currency}}</h5>
+      <p class="card-text">{{product.description}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Satın Al</a>
+    </div>
+  </div>
+</div>
