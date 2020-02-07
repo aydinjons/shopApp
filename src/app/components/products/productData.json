@@ -1,7 +1,12 @@
  [
-    { "id": 1, "name": "Asus Laptop", "price": 3000,"categoryId": 1, "description": "i7 8b 500gb hdd 2 gb nvidia", "count": 0, "src": "/assets/images/laptop.jpeg" },
-    { "id": 2, "name": "Logitech Mouse", "price": 100, "categoryId": 2, "description": "1600 dpi game mouse", "count": 0, "src": "/assets/images/mouse.jpg" },
-    { "id": 3, "name": "Led Tv", "price": 5000, "categoryId": 3, "description": "43 inch",  "count": 0, "src": "/assets/images/tv.jpg" },
-    { "id": 4, "name": "Orhan Pamuk", "price": 30, "categoryId": 4, "description": "Masumiyet Müzesi",  "count": 0, "src": "/assets/images/orhan.jpg" },
-    { "id": 5, "name": "Apple Iphone X", "price": 10000, "categoryId": 5, "description": "128 gb",  "count": 0, "src": "/assets/images/586.jpg" }
+    { "id": 1, "name": "Asus Laptop", "price": 3000,"categoryId": 2, "description": "i7 8b 500gb hdd 2 gb nvidia", "count": 0, "src": "/assets/images/laptop.jpeg" },
+    { "id": 2, "name": "Logitech Mouse", "price": 100, "categoryId": 1, "description": "1600 dpi game mouse", "count": 0, "src": "/assets/images/mouse.jpg" },
+    { "id": 3, "name": "Led Tv", "price": 5000, "categoryId": 1, "description": "43 inch",  "count": 0, "src": "/assets/images/tv.jpg" },
+    { "id": 4, "name": "Orhan Pamuk", "price": 30, "categoryId": 5, "description": "Masumiyet Müzesi",  "count": 0, "src": "/assets/images/orhan.jpg" },
+    { "id": 5, "name": "Apple Iphone X", "price": 10000, "categoryId": 1, "description": "128 gb",  "count": 0, "src": "/assets/images/586.jpg" },
+    { "id": 6, "name": "Beko Buzdolabı", "price": 4000,"categoryId": 7, "description": "No Frost 500 Litre", "count": 0, "src": "/assets/images/dolap.jpg" },
+    { "id": 7, "name": "Arzum Mutfak Robotu", "price": 500, "categoryId": 8, "description": "Parçalar, Doğrar, Sıkar", "count": 0, "src": "/assets/images/robot.jpg" },
+    { "id": 8, "name": "Cort Gitar", "price": 2000, "categoryId": 9, "description": "Cort Elektro Gitar",  "count": 0, "src": "/assets/images/gitar.jpg" },
+    { "id": 9, "name": "Hp Toner", "price": 300, "categoryId": 3, "description": "HP Laserjet Toner",  "count": 0, "src": "/assets/images/toner.jpg" },
+    { "id": 10, "name": "Kütük Çiçek", "price": 100, "categoryId": 10, "description": "Kütük Papatya Çiçeği",  "count": 0, "src": "/assets/images/cicek.jpg" }
   ]
