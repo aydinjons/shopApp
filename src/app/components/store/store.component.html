@@ -4,14 +4,26 @@
     Sepet
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <div *ngFor="let item of products$ | async; let i = index">
-      <li class="menu-item"><img [src]="item.src" class="basket-img">
-        <span class="badge badge-primary badge-pill p-1 m-1">{{item.name}} </span>
-        <span class="badge badge-primary badge-pill p-1 m-1">Adet:{{item.count}}</span>
-        <span class="badge badge-primary badge-pill p-1 m-1">Fiyat:{{item.price}}</span>
-        <span class="badge badge-primary badge-pill p-1 m-1">Toplam: {{item.count*item.price}}</span>
-      </li>
-    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Adı</th>
+          <th scope="col">Adedi</th>
+          <th scope="col">Fiyatı</th>
+          <th scope="col">Toplam</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-warning" *ngFor="let item of products$ | async; let i = index" >
+          <th scope="row" ><img class="basket-img" [src]="item.src" alt=""></th>
+          <td>{{item.name}}</td>
+          <td>{{item.count}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.count*item.price}}</td>
+        </tr>
+      </tbody>
+    </table> 
     <ng-container *ngIf="addedItems != undefined">
       <div class="container">
         <div class="row">
@@ -23,3 +35,5 @@
     </ng-container>
   </div>
 </div>
+
+
