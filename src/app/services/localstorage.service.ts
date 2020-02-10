@@ -6,7 +6,6 @@ import { filter, startWith, map, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class LocalstorageService {
-
   private localStorage$ = new Subject<string>();
   private storage: any = {};
 
@@ -15,13 +14,13 @@ export class LocalstorageService {
     let key;
     const localStorages = {};
 
-    while (key = localStorage.key(i++)) {
+    // tslint:disable-next-line: no-conditional-assignment
+    while ((key = localStorage.key(i++))) {
       try {
         localStorages[key] = JSON.parse(localStorage.getItem(key));
       } catch (error) {
         localStorages[key] = localStorage.getItem(key);
       }
-
     }
     this.storage = localStorages;
   }
@@ -35,18 +34,19 @@ export class LocalstorageService {
     this.localStorage$.next(key);
     localStorage.setItem(key, JSON.stringify(item));
   }
-  remove(key: string, item): void {
-   console.log( this.storage.delete(item) );
-    
-    this.localStorage$.next(key);
+  remove(key: string, item: any): void {
+    const items = this.storage[key];
+    items.splice(item, 1);
+    localStorage.setItem(key, JSON.stringify(items));
+    console.log(items);
   }
 
   observe(key: string) {
     return this.localStorage$.pipe(
       startWith(key),
+      // tslint:disable-next-line: triple-equals
       filter(changedKey => changedKey == key),
       map((changedKey: string) => this.storage[changedKey])
     );
   }
-
 }

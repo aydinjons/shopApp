@@ -18,9 +18,8 @@ export class ShoppingCartComponent implements OnInit {
   ngOnInit() {
     this.products$ = this.localstorageService.observe('products');
   }
-  delete(products,item){
-    
-    window.localStorage.removeItem(item);
+  delete(products: string, item: any) {
+    this.localstorageService.remove('products', item);
   }
 
 }

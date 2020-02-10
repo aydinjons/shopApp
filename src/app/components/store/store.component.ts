@@ -28,6 +28,11 @@ export class StoreComponent implements OnInit {
   addedItems: any;
   ngOnInit() {
     this.products$ = this.localstorageService.observe('products');
-    this.localstorageService.observe("products").subscribe(item => this.addedItems =item); 
+    this.localstorageService.observe('products').subscribe(item => this.addedItems = item);
+    console.log(this.addedItems);
+
+  }
+  delete(products: string, item: any) {
+    this.localstorageService.remove('products', item);
   }
 }
