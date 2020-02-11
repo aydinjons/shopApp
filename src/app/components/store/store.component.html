@@ -7,7 +7,7 @@
     <table class="table table-hover" *ngIf="products?.length;else empty">
       <thead>
         <tr>
-          <th scope="col"></th>
+          <th scope="col">Ürün</th>
           <th scope="col">Adı</th>
           <th scope="col">Adedi</th>
           <th scope="col">Fiyatı</th>
@@ -21,12 +21,12 @@
           <td>{{item.count}}</td>
           <td>{{item.price}}</td>
           <td>{{item.count*item.price}}</td>
-          <td (click)="delete(item)">x</td>
+          <td class="delete-product" (click)="delete(item)"><button  class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button></td>
         </tr>
-        <div class="col">
-          <button type="button" class="btn btn-primary btn-lg btn-block m-1" routerLink="shopcart">Sepete Git</button></div>
+       
       </tbody>
-
+      <div class="col">
+          <button type="button" class="btn btn-primary btn-lg btn-block m-1" routerLink="shopcart">SepeteGit</button></div>
     </table>
     <ng-template #empty>
       <div class="container">

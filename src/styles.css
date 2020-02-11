@@ -3,6 +3,8 @@
 @import "../node_modules/alertifyjs/build/css/themes/bootstrap.min.css";
 @import "../node_modules/ng-alertify/dist/ng-alertify.css";
 
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+
 h3{
     color:dodgerblue;
     border-bottom: 3px solid dodgerblue;
