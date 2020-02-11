@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { BasketService } from "src/app/services/basket.service";
+import { Component, OnInit } from '@angular/core';
+import { BasketService } from 'src/app/services/basket.service';
 
 @Component({
-  selector: "app-shopping-cart",
-  templateUrl: "./shopping-cart.component.html",
-  styleUrls: ["./shopping-cart.component.css"]
+  selector: 'app-shopping-cart',
+  templateUrl: './shopping-cart.component.html',
+  styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
   products$: any;

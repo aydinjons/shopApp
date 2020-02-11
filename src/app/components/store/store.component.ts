@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
-import { BasketService } from "src/app/services/basket.service";
+import { Component, OnInit } from '@angular/core';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { BasketService } from 'src/app/services/basket.service';
 
 @Component({
-  selector: "app-store",
-  templateUrl: "./store.component.html",
-  styleUrls: ["./store.component.css"]
+  selector: 'app-store',
+  templateUrl: './store.component.html',
+  styleUrls: ['./store.component.css']
 })
 export class StoreComponent implements OnInit {
   cartPlus = faCartPlus;

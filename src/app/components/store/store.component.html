@@ -23,9 +23,10 @@
           <td>{{item.count*item.price}}</td>
           <td (click)="delete(item)">x</td>
         </tr>
+        <div class="col">
+          <button type="button" class="btn btn-primary btn-lg btn-block m-1" routerLink="shopcart">Sepete Git</button></div>
       </tbody>
-      <div class="col"><button type="button" class="btn btn-primary btn-lg btn-block m-1" routerLink="shopcart">Sepete
-          Git</button></div>
+
     </table>
     <ng-template #empty>
       <div class="container">

@@ -1,11 +1,11 @@
-import { LocalstorageService } from "src/app/services/localstorage.service";
-import { AlertifyService } from "./alertifyService";
-import { Injectable } from "@angular/core";
-import { BehaviorSubject } from "rxjs";
-import { map } from "rxjs/operators";
+import { LocalstorageService } from 'src/app/services/localstorage.service';
+import { AlertifyService } from './alertifyService';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class BasketService {
   products = {};
@@ -27,13 +27,13 @@ export class BasketService {
 
     this.products$.next(this.products);
     this.alertifyService.success(`${product.name} added`);
-    this.localstorageService.set("products", this.products);
+    this.localstorageService.set('products', this.products);
   }
 
   delete(id) {
     delete this.products[id];
     this.products$.next(this.products);
-    this.localstorageService.set("products", this.products);
+    this.localstorageService.set('products', this.products);
   }
 
   getProducts() {
