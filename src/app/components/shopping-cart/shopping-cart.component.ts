@@ -1,25 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { BasketService } from 'src/app/services/basket.service';
-import { LocalstorageService } from 'src/app/services/localstorage.service';
+import { Component, OnInit } from "@angular/core";
+import { BasketService } from "src/app/services/basket.service";
 
 @Component({
-  selector: 'app-shopping-cart',
-  templateUrl: './shopping-cart.component.html',
-  styleUrls: ['./shopping-cart.component.css']
+  selector: "app-shopping-cart",
+  templateUrl: "./shopping-cart.component.html",
+  styleUrls: ["./shopping-cart.component.css"]
 })
 export class ShoppingCartComponent implements OnInit {
   products$: any;
 
-  constructor(
-    private basketService: BasketService,
-    private localstorageService: LocalstorageService
-  ) { }
+  constructor(private basketService: BasketService) {}
 
   ngOnInit() {
-    this.products$ = this.localstorageService.observe('products');
+    this.products$ = this.basketService.getProducts();
   }
-  delete(products: string, item: any) {
-    this.localstorageService.remove('products', item);
+  delete(item: any) {
+    this.basketService.delete(item.id);
   }
-
 }

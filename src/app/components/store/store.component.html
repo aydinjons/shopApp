@@ -3,9 +3,8 @@
     aria-haspopup="true" aria-expanded="false">
     Sepet
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
-    <table class="table table-hover">
-      <ng-container *ngIf="addedItems.length != 0">
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <table class="table table-hover" *ngIf="products?.length;else empty">
       <thead>
         <tr>
           <th scope="col"></th>
@@ -15,28 +14,26 @@
           <th scope="col">Toplam</th>
         </tr>
       </thead>
-    </ng-container>
       <tbody>
-        <tr class="table-warning" *ngFor="let item of products$ | async; let i = index" >
-          <th scope="row" ><img class="basket-img" [src]="item.src" alt=""></th>
+        <tr class="table-warning" *ngFor="let item of products; let i = index">
+          <th scope="row"><img class="basket-img" [src]="item.src" alt=""></th>
           <td>{{item.name}}</td>
           <td>{{item.count}}</td>
           <td>{{item.price}}</td>
           <td>{{item.count*item.price}}</td>
-          <td (click)="delete('products',item)">x</td>
+          <td (click)="delete(item)">x</td>
         </tr>
       </tbody>
-    </table> 
-    <ng-container *ngIf="addedItems.length != 0">
+      <div class="col"><button type="button" class="btn btn-primary btn-lg btn-block m-1" routerLink="shopcart">Sepete
+          Git</button></div>
+    </table>
+    <ng-template #empty>
       <div class="container">
         <div class="row">
-          <div class="col"><button type="button" class="btn btn-primary btn-lg btn-block m-1" routerLink="shopcart">Sepete Git</button></div>
-          <div class="col"> <span class="badge badge-danger mt-3">Sepetinizde {{addedItems.length}} çeşit ürün vardır</span>
+          <div class="col"> <span class="badge badge-danger mt-3">Sepetiniz boştur</span>
           </div>
         </div>
       </div>
-    </ng-container>
+    </ng-template>
   </div>
 </div>
-
-

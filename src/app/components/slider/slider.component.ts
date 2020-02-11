@@ -7,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
 
- 
  images = [1, 2, 3].map(() => `/assets/images/banners/${Math.floor(Math.random() * 4)}.jpg`);
 
-  
   constructor() { }
 
   ngOnInit() {

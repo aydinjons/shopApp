@@ -30,7 +30,7 @@
     <td data-th="Subtotal" class="text-center">{{item.count*item.price}}</td>
         <td class="actions" data-th="">
           <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-          <button class="btn btn-danger btn-sm" (click)="delete('products',item)"><i class="fa fa-trash-o"></i></button>
+          <button class="btn btn-danger btn-sm" (click)="delete(item)"><i class="fa fa-trash-o"></i></button>
         </td>
       </tr>
     </tbody>

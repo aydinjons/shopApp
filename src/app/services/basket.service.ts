@@ -1,36 +1,42 @@
-import { LocalstorageService } from 'src/app/services/localstorage.service';
-import { ProductFilterPipe } from './../components/products/product-filter.pipe';
-import { AlertifyService } from './alertifyService';
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-
+import { LocalstorageService } from "src/app/services/localstorage.service";
+import { AlertifyService } from "./alertifyService";
+import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
+import { map } from "rxjs/operators";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class BasketService {
   products = {};
-  products$ = new BehaviorSubject([]);
+  products$ = new BehaviorSubject({});
   totalPrice: any;
 
   constructor(
     private alertifyService: AlertifyService,
     private localstorageService: LocalstorageService
-  ) { }
+  ) {
+    this.products = this.localstorageService.get('products');
+    this.products$.next(this.products);
+  }
 
   add(product) {
-    product = this.products[product.name] || product;
+    product = this.products[product.id] || product;
     const count = (product.count || 0) + 1;
-    this.products[product.name] = { ...product, count };
+    this.products[product.id] = { ...product, count };
 
-    const productsArray = Object.values(this.products);
-    this.products$.next(productsArray);
+    this.products$.next(this.products);
     this.alertifyService.success(`${product.name} added`);
-    this.localstorageService.set('products', productsArray);
+    this.localstorageService.set("products", this.products);
+  }
+
+  delete(id) {
+    delete this.products[id];
+    this.products$.next(this.products);
+    this.localstorageService.set("products", this.products);
   }
 
   getProducts() {
-    return this.products$.asObservable();
+    return this.products$.asObservable().pipe(map(list => Object.values(list)));
   }
-
 }

@@ -34,13 +34,13 @@ export class LocalstorageService {
     this.localStorage$.next(key);
     localStorage.setItem(key, JSON.stringify(item));
   }
-  remove(key: string, item: any): void {
-    const items = this.storage[key];
-    items.splice(item, 1);
-    localStorage.setItem(key, JSON.stringify(items));
-    this.localStorage$.next(key);
-    console.log(items);
-  }
+  // remove(key: string, item: any): void {
+  //   const items = this.storage[key];
+  //   items.splice(item, 1);
+  //   localStorage.setItem(key, JSON.stringify(items));
+  //   this.localStorage$.next(key);
+  //   console.log(items);
+  // }
 
   observe(key: string) {
     return this.localStorage$.pipe(

@@ -4,8 +4,11 @@ img{
     outline: none;
 }
 .container{
-    width:100%;
     border-radius: 20px;
+    outline: none;
+}
+
+.carousel{
     outline: none;
 }
 
