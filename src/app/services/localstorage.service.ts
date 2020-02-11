@@ -38,6 +38,7 @@ export class LocalstorageService {
     const items = this.storage[key];
     items.splice(item, 1);
     localStorage.setItem(key, JSON.stringify(items));
+    this.localStorage$.next(key);
     console.log(items);
   }
 

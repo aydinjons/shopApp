@@ -20,11 +20,11 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "@fortawesome/angular-fontawesome": "^0.5.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.26",
-    "@fortawesome/free-solid-svg-icons": "^5.12.0",
-    "@ng-bootstrap/ng-bootstrap": "^5.2.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@ng-bootstrap/ng-bootstrap": "^5.2.2",
     "@ng-bootstrap/schematics": "^2.0.0-alpha.1",
-    "@types/jquery": "^3.3.31",
+    "@types/jquery": "^3.3.32",
     "alertifyjs": "^1.13.1",
     "bootbox": "^5.4.0",
     "bootstrap": "^4.4.1",
@@ -44,11 +44,11 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.803.24",
-    "@angular/cli": "^8.3.24",
+    "@angular-devkit/build-angular": "^0.803.25",
+    "@angular/cli": "^8.3.25",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
-    "@types/jasmine": "^3.5.2",
+    "@types/jasmine": "^3.5.3",
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "^12.12.26",
     "codelyzer": "^5.2.1",
@@ -62,6 +62,6 @@
     "protractor": "^5.4.3",
     "ts-node": "~8.5.4",
     "tslint": "~5.20.1",
-    "typescript": "^3.5.2"
+    "typescript": "^3.7.5"
   }
 }
