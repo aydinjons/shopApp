@@ -36,13 +36,13 @@ font-size: large;
 #search-box{
     transition: 0.7s;
     width: 200px;
-    color:dodgerblue;
+   
     font-size: large; 
 }
 #search-box:focus{
 width: 400px;
 font-size: large; 
-background-color: #ff401e;
+background-color: #fff;
 color: white;
 padding-left: 10px;
 }
